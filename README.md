@@ -1,1 +1,2 @@
-# magiles_practica
+# Metodolgías Ágiles
+Práctica de Github
