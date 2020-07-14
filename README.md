@@ -1,2 +1,2 @@
-# Metodolgías Ágiles
+# Metodologías Ágiles
 Práctica de Github
