@@ -198,7 +198,7 @@ public class JFramePublicacion extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, "card2");
 
-        getAccessibleContext().setAccessibleName("Lista de Metros");
+        getAccessibleContext().setAccessibleName("Lista de Viajes");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

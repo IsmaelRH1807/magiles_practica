@@ -87,6 +87,6 @@ public class Publicacion {
     public int PrecioTotal(int precioUni, int numAsi){
         int precio;
         precio = precioUni*numAsi;
-      return precio;  
+        return precio;  
     }
 }
