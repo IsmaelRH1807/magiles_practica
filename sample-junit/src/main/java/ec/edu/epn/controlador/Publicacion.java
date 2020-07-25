@@ -22,7 +22,7 @@ public class Publicacion {
         
        
     public void renderizarTabla(JTable tablaViajes) {
-        
+    	
         for (int i = 1; i < tablaViajes.getColumnCount(); i++) {
             DefaultTableColumnModel colModel = (DefaultTableColumnModel) tablaViajes.getColumnModel();
             TableColumn col = colModel.getColumn(i);
@@ -40,6 +40,9 @@ public class Publicacion {
         tablaViajes.getColumnModel().getColumn(0).setMinWidth(0);
         tablaViajes.getColumnModel().getColumn(0).setPreferredWidth(0);
         tablaViajes.getColumnModel().getColumn(0).setResizable(false);
+        System.out.println("Tu ñaña renderizo todo");
+
+        
     }
         
         
@@ -82,7 +85,7 @@ public class Publicacion {
 
         return modelo;
        
-    }
+   }
        
     public int PrecioTotal(int precioUni, int numAsi){
         int precio;

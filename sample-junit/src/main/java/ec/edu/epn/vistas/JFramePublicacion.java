@@ -82,6 +82,7 @@ public class JFramePublicacion extends javax.swing.JFrame {
         botonVerViaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVerViajeActionPerformed(evt);
+             
             }
         });
         jPanel3.add(botonVerViaje);

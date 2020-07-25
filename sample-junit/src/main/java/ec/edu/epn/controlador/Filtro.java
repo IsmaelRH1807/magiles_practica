@@ -31,9 +31,10 @@ public class Filtro {
             }
            
         }
+               
         );   
             
-        }
+     }
         
         else if(optDestino.isSelected()){
                  JtxtFiltro.addKeyListener(new KeyAdapter() {
@@ -59,6 +60,6 @@ public class Filtro {
         }
            trs=new TableRowSorter<DefaultTableModel>(modelo);
             tablaViajes.setRowSorter(trs);
-         }   
+        }   
     
 }

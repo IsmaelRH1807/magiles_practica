@@ -69,7 +69,7 @@ public class Viaje {
         this.horaLlegada  = horaLlegada;
         this.horaSalida = horaSalida;
     }
-
+    
     public Viaje(String origen, String destino, String fecha, String hora, int total_asientos, int precio) {
         SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
         this.origen = origen;

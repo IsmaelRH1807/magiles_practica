@@ -54,7 +54,7 @@ public class ListaViaje {
         return aux;
     }
 
-    public void agregarViaje(Viaje nuevo) {
+    public boolean agregarViaje(Viaje nuevo) {
         if (nuevo.getIndiceViaje() == null) {
             nuevo.setIndiceViaje(this.generarIDNuevoViaje());
         }
@@ -71,6 +71,7 @@ public class ListaViaje {
                             && r.getViaje().getDestino().equals(p.getViaje().getDestino())) {
                         JOptionPane.showMessageDialog(null, "El Viaje ya se encuentra en la lista!",
                                 "Advertencia", JOptionPane.WARNING_MESSAGE);
+                        return false;
                     } else if (p == this.raiz) {
                         this.raiz = r;
                         r.setEnlace(p);
@@ -103,61 +104,30 @@ public class ListaViaje {
                 q.setEnlace(r);
             }
         }
+        return true;
     }
-
-  /*  public void eliminarViaje(String dato) {
-        boolean b = false;
-        if (this.listaVacia()) {
-            JOptionPane.showMessageDialog(null, "No hay Viajes en la lista!");
-            return;
-        } else {
-            Nodo p = this.raiz;
-            Nodo q = p;
-            Nodo r;
-            while (p != null) {
-                if (p.getViaje().getIndiceViaje().equals(dato)) {
-                    if (p == this.raiz) {
-                        if (p.getEnlace() == null) {
-                            this.raiz = null;
-                            b = true;
-                            break;
-                        } else {
-                            this.raiz = p.getEnlace();
-                            b = true;
-                            break;
-                        }
-                    } else if (p.getEnlace() == null) {
-                        q.setEnlace(null);
-                        b = true;
-                        break;
-                    } else {
-                        r = p.getEnlace();
-                        q.setEnlace(r);
-                        b = true;
-                        break;
-                    }
-                } else {
-                    q = p;
-                    p = p.getEnlace();
-                }
-            }
-        }
-        if (b == false) {
-            JOptionPane.showMessageDialog(null, "Viaje no Encontrado", "Advertencia", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
-    }*/
     
-    public void bajarDisponibilidad(String indiceViaje, int asientos) {
+    public boolean bajarDisponibilidad(String indiceViaje, int asientos) {
         Nodo p = this.raiz;
         while (p != null) {
             if (p.getViaje().getIndiceViaje().equals(indiceViaje)) {
                 p.getViaje().bajarDisponibilidad(asientos);
-                break;
+                return true;
             } else {
                 p = p.getEnlace();
             }
         }
+        return false;
+    }
+    
+    public int contarViajes() {
+    	Nodo p = this.raiz;
+    	int contador = 0;
+    	while (p != null) {
+    		contador+=1;
+            p = p.getEnlace();
+        }
+    	return contador;
     }
 
     public LinkedList<Viaje> listadoViajes() {
@@ -170,7 +140,7 @@ public class ListaViaje {
         return aux;
     }
 
-    private String generarIDNuevoViaje() {
+    public String generarIDNuevoViaje() {
         int num1 = 65;
         int num2 = 90;
 
