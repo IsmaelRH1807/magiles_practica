@@ -40,8 +40,6 @@ public class Publicacion {
         tablaViajes.getColumnModel().getColumn(0).setMinWidth(0);
         tablaViajes.getColumnModel().getColumn(0).setPreferredWidth(0);
         tablaViajes.getColumnModel().getColumn(0).setResizable(false);
-        System.out.println("Tu ñaña renderizo todo");
-
         
     }
         
