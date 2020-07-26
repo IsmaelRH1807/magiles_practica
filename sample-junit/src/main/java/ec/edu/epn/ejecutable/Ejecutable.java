@@ -15,6 +15,8 @@ public class Ejecutable {
     	
        String nombre = "Bryan Galindo"; 
        String cedula = "1723695887";
+       
+       
         JFramePublicacion jpub = new JFramePublicacion(nombre,cedula);
         jpub.setVisible(true);
         
