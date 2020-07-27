@@ -104,6 +104,7 @@ public class ListaViaje {
                 q.setEnlace(r);
             }
         }
+        System.out.println("Viaje Ingresado con exito!!");
         return true;
     }
     
@@ -112,6 +113,7 @@ public class ListaViaje {
         while (p != null) {
             if (p.getViaje().getIndiceViaje().equals(indiceViaje)) {
                 p.getViaje().bajarDisponibilidad(asientos);
+                System.out.println("Se redujo el numero de asientos disponibles");
                 return true;
             } else {
                 p = p.getEnlace();

@@ -11,7 +11,8 @@ import ec.edu.epn.controlador.Viaje;
 import ec.edu.epn.vistas.JFramePublicacion;
 
 public class Ejecutable {
-	static ListaViaje list = new ListaViaje();;
+	static ListaViaje list = new ListaViaje();
+
 	
     public static void main(String[] args) {
        
@@ -40,6 +41,9 @@ public class Ejecutable {
 		}
 		
 		list.contarViajes();
+		list.bajarDisponibilidad("0826",2);
+		
+
       
         /*JFramePublicacion jpub = new JFramePublicacion(nombre,cedula);
         jpub.setVisible(true);*/
