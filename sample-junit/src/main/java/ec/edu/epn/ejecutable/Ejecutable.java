@@ -14,7 +14,7 @@ public class Ejecutable {
     	System.out.println("********************************");
     	
        String nombre = "Bryan Galindo"; 
-       String cedula = "1723695887 ";
+       String cedula = "1723695887  ";
        
        
         JFramePublicacion jpub = new JFramePublicacion(nombre,cedula);
