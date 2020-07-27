@@ -127,7 +127,9 @@ public class ListaViaje {
     		contador+=1;
             p = p.getEnlace();
         }
+    	System.out.println("el numero de viajes es "+contador);
     	return contador;
+    	
     }
 
     public LinkedList<Viaje> listadoViajes() {
